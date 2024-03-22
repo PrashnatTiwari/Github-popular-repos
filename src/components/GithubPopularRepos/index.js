@@ -30,12 +30,6 @@ class GithubPopularRepos extends Component {
     dataList: [],
   }
 
-  showData = id => {
-    this.setState({
-      activeId: id,
-    })
-  }
-
   componentDidMount() {
     this.getLanguageData()
   }
@@ -63,9 +57,7 @@ class GithubPopularRepos extends Component {
         dataList: fetchedData,
         apiStatus: apiStatusConstant.success,
       })
-    }
-
-    if (response.status === 401) {
+    } else {
       this.state({
         apiStatus: apiStatusConstant.failure,
       })
@@ -140,6 +132,15 @@ class GithubPopularRepos extends Component {
           <Loader type="ThreeDots" color="#0284c7" height={80} width={80} />
         </div>
       </div>
+    )
+  }
+
+  showData = id => {
+    this.setState(
+      {
+        activeId: id,
+      },
+      this.getLanguageData,
     )
   }
 
