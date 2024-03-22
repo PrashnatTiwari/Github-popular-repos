@@ -1,0 +1,21 @@
+.active-list-item {
+  list-style-type: none;
+  font-family: Roboto;
+  border: 1px solid #0284c7;
+  border-radius: 5px;
+  width: 5vw;
+  font-size: 10px;
+  cursor: pointer;
+  color: #0284c7;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.list-item {
+  list-style-type: none;
+  font-family: Roboto;
+  cursor: pointer;
+  font-weight: bold;
+  width: 5vw;
+  font-size: 13px;
+}
